@@ -1,0 +1,204 @@
+/* Base du body */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease;
+}
+
+
+
+
+/* Styles spécifiques pour la page d'accueil */
+body.homepage {
+    background-color: #1e1e1e;
+    color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body.homepage header {
+    background-color: transparent;
+    color: #f39c12;
+    padding: 0;
+    text-align: center;
+    border: none;
+}
+
+body.homepage h1 {
+    font-size: 4em;
+    letter-spacing: 3px;
+    animation: fadeIn 2s ease-in-out;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+body.homepage nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+body.homepage nav ul li {
+    margin: 15px 0;
+}
+
+body.homepage nav ul li a {
+    font-size: 1.8em;
+    color: #f39c12;
+    text-decoration: none;
+    padding: 15px 30px;
+    border: 2px solid #f39c12;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.homepage nav ul li a:hover {
+    background-color: #f39c12;
+    color: #1e1e1e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+
+
+
+
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e; /* Couleur sombre pour le header */
+    color: white;
+    border-bottom: 4px solid #f39c12; /* Ligne décorative */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Couleur dorée au survol */
+}
+
+/* Animation pour le header */
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+    animation: slideIn 1s ease-out;
+    letter-spacing: 2px;
+}
+
+/* Style global du main */
+main {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    animation: fadeIn 1.5s ease-in;
+    border-radius: 10px; /* Coins arrondis pour les images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* Styles pour <figure> et <figcaption> */
+figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+/* Contenu */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Callout (encadré spécial) */
+.callout {
+    background-color: #f39c12;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    animation: pulse 5s infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
