@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #2980b9; /* Couleur principale */
+    --secondary-color: #27ae60; /* Couleur secondaire */
+    --background-color: #ecf0f1; /* Couleur de fond */
+    --text-color: #2c3e50; /* Couleur du texte */
+}
+
 /* Reset CSS */
 * {
     margin: 0;
@@ -7,84 +14,106 @@
 
 /* Global styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Arial', sans-serif; /* Changer la police */
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
     padding: 20px;
 }
 
 /* Header styles */
 header {
-    background-color: #4CAF50;
-    padding: 20px;
+    background-color: var(--primary-color);
+    padding: 40px 20px;
     text-align: center;
+    border-radius: 8px; /* Coins arrondis pour le header */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
     color: #fff;
-    font-size: 2.5em;
+    font-size: 2.5em; /* Taille du texte du titre */
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #ecf0f1; /* Couleur du sous-titre */
 }
 
 /* Section introduction */
 .intro {
     text-align: center;
-    margin: 40px 0;
+    margin: 30px 0;
 }
 
 .intro p {
     font-size: 1.2em;
-    color: #555;
+    color: var(--secondary-color); /* Utilisation de la couleur secondaire */
 }
 
 /* Tools section */
 .tools {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    display: flex; /* Utiliser flex pour une mise en page en colonnes */
+    flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
+    justify-content: space-between; /* Espacement entre les éléments */
+    margin-top: 20px;
 }
 
 .tool {
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border: 1px solid var(--primary-color); /* Bordure avec la couleur primaire */
+    border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    margin: 10px; /* Ajout d'un espacement entre les outils */
+    flex: 1 1 30%; /* Permet aux colonnes de s'adapter à la taille de l'écran */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout d'une ombre lors du survol */
 }
 
 .tool:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px); /* Légère élévation lors du survol */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
 }
 
-.tool h2 {
+.tool h3 {
     font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #4CAF50;
+    margin-bottom: 15px;
+    color: var(--primary-color);
 }
 
 .tool p {
-    margin-bottom: 20px;
-    color: #666;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* Section Titles */
+.tools h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: var(--secondary-color); /* Couleur secondaire pour les titres de section */
+    text-align: center; /* Centrer les titres de section */
 }
 
 /* Buttons */
 .buttons {
     display: flex;
     gap: 10px;
+    justify-content: center; /* Centrer les boutons */
 }
 
 .btn {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: var(--primary-color);
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Ajout d'une transition pour le survol */
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: var(--secondary-color);
+    transform: scale(1.05); /* Agrandissement au survol */
 }
 
 /* Responsive design */
@@ -92,12 +121,20 @@ header h1 {
     header h1 {
         font-size: 2em;
     }
-    
-    .tool h2 {
-        font-size: 1.3em;
+
+    .tool h3 {
+        font-size: 1.4em;
     }
-    
+
     .intro p {
         font-size: 1em;
+    }
+
+    .tools h2 {
+        font-size: 1.8em;
+    }
+
+    .tool {
+        flex: 1 1 100%; /* Pleine largeur sur les petits écrans */
     }
 }
